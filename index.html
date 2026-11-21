@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nisha's Birthday</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Figtree:wght@400;500;600&family=Gloock&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="petals" aria-hidden="true"></canvas>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<main>
+  <div class="wrap">
+
+    <section class="hero" id="top">
+      <div>
+        <h1><span class="hello">Happy birthday,</span><span class="nm">Nisha</span></h1>
+        <p class="lede">I made you a little corner of the internet. Pop things, scratch things, flip things over, and read what's inside.</p>
+        <div class="cta">
+          <button class="btn btn-primary" id="confetti-btn" type="button">Throw confetti</button>
+          <button class="btn btn-soft" id="song" type="button">Play the song</button>
+        </div>
+      </div>
+
+      <div class="cake-wrap">
+        <i class="spark" style="left: 4%; top: 18%; animation-delay: 0s;"></i>
+        <i class="spark" style="left: 90%; top: 52%; animation-delay: 0.9s;"></i>
+        <i class="spark" style="left: 12%; top: 62%; animation-delay: 1.7s;"></i>
+        <svg class="badge" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="circ" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"></path></defs>
+          <text font-size="11" letter-spacing="1" fill="currentColor"><textPath href="#circ">make a wish • make a wish • make a wish •</textPath></text>
+        </svg>
+        <button class="cake-btn" id="cake" type="button" aria-pressed="false" aria-label="Blow out the candle and make a wish">
+          <svg class="cake" viewBox="0 0 240 260" aria-hidden="true">
+            <defs>
+              <linearGradient id="gPink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb3cb"></stop><stop offset="1" stop-color="#ff7aa2"></stop></linearGradient>
+              <linearGradient id="gCream" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff6ea"></stop><stop offset="1" stop-color="#ffdcc0"></stop></linearGradient>
+              <linearGradient id="gLilac" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dccdff"></stop><stop offset="1" stop-color="#b79cf5"></stop></linearGradient>
+              <radialGradient id="gFlame" cx="0.5" cy="0.7" r="0.6"><stop offset="0" stop-color="#fff6dc"></stop><stop offset="0.4" stop-color="#ffd08a"></stop><stop offset="0.8" stop-color="#ff9a4d"></stop><stop offset="1" stop-color="#ff9a4d" stop-opacity="0"></stop></radialGradient>
+              <radialGradient id="gAura"><stop offset="0" stop-color="#ffbe78" stop-opacity="0.6"></stop><stop offset="1" stop-color="#ffbe78" stop-opacity="0"></stop></radialGradient>
+            </defs>
+            <ellipse cx="120" cy="238" rx="104" ry="14" fill="#d8c9ea"></ellipse>
+            <rect x="30" y="170" width="180" height="64" rx="14" fill="url(#gLilac)"></rect>
+            <rect x="30" y="170" width="180" height="14" rx="7" fill="#fff7f0"></rect>
+            <line x1="38" y1="184" x2="202" y2="184" stroke="#fff7f0" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 14"></line>
+            <rect x="52" y="116" width="136" height="60" rx="14" fill="url(#gCream)"></rect>
+            <rect x="52" y="116" width="136" height="14" rx="7" fill="#fff7f0"></rect>
+            <line x1="60" y1="130" x2="180" y2="130" stroke="#fff7f0" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 14"></line>
+            <rect x="74" y="66" width="92" height="56" rx="14" fill="url(#gPink)"></rect>
+            <rect x="74" y="66" width="92" height="14" rx="7" fill="#fff7f0"></rect>
+            <line x1="82" y1="80" x2="158" y2="80" stroke="#fff7f0" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 14"></line>
+            <g fill="#ffd979">
+              <rect x="86" y="98" width="8" height="3" rx="1.5" transform="rotate(30 90 99)"></rect>
+              <rect x="112" y="104" width="8" height="3" rx="1.5" transform="rotate(-20 116 105)"></rect>
+              <rect x="138" y="96" width="8" height="3" rx="1.5" transform="rotate(50 142 97)"></rect>
+              <rect x="152" y="108" width="8" height="3" rx="1.5" transform="rotate(-40 156 109)"></rect>
+            </g>
+            <g fill="#8cc8ff">
+              <rect x="72" y="146" width="8" height="3" rx="1.5" transform="rotate(-30 76 147)"></rect>
+              <rect x="104" y="150" width="8" height="3" rx="1.5" transform="rotate(25 108 151)"></rect>
+              <rect x="140" y="148" width="8" height="3" rx="1.5" transform="rotate(-45 144 149)"></rect>
+              <rect x="166" y="152" width="8" height="3" rx="1.5" transform="rotate(35 170 153)"></rect>
+            </g>
+            <g fill="#ff7aa2">
+              <rect x="54" y="206" width="8" height="3" rx="1.5" transform="rotate(20 58 207)"></rect>
+              <rect x="96" y="210" width="8" height="3" rx="1.5" transform="rotate(-35 100 211)"></rect>
+              <rect x="134" y="204" width="8" height="3" rx="1.5" transform="rotate(40 138 205)"></rect>
+              <rect x="176" y="210" width="8" height="3" rx="1.5" transform="rotate(-20 180 211)"></rect>
+            </g>
+            <rect x="116" y="36" width="8" height="32" rx="2" fill="#ffffff"></rect>
+            <path d="M116 44 l8 -4 M116 52 l8 -4 M116 60 l8 -4" stroke="#ff7aa2" stroke-width="2.5" fill="none"></path>
+            <rect x="119" y="29" width="2" height="8" rx="1" fill="#4a3a52"></rect>
+            <circle class="aura" cx="120" cy="20" r="38" fill="url(#gAura)"></circle>
+            <ellipse class="flame" cx="120" cy="19" rx="6.5" ry="11" fill="url(#gFlame)"></ellipse>
+            <path class="smoke" d="M120 28 q-6 -10 0 -18 q6 -8 0 -16" stroke="#b8b0cc" stroke-width="4" stroke-linecap="round" fill="none"></path>
+          </svg>
+        </button>
+        <p class="hint" id="hint" aria-live="polite">Tap the candle, close your eyes, make a wish.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label">pop a balloon</p>
+      <h2>Seven little things I wanted to say</h2>
+      <div class="balloons">
+        <button class="balloon" type="button" style="--c: #ff7aa2; --d: 5s; --dl: 0s;" data-msg="You make ordinary days feel like celebrations." aria-label="Pink balloon"></button>
+        <button class="balloon" type="button" style="--c: #ffd979; --d: 6s; --dl: -1.2s;" data-msg="I'm prouder of you than you know." aria-label="Yellow balloon"></button>
+        <button class="balloon" type="button" style="--c: #8cc8ff; --d: 5.5s; --dl: -2.4s;" data-msg="Thank you for always picking up my calls." aria-label="Blue balloon"></button>
+        <button class="balloon" type="button" style="--c: #8fdcbc; --d: 6.4s; --dl: -0.6s;" data-msg="I hope your year is full of easy mornings." aria-label="Green balloon"></button>
+        <button class="balloon" type="button" style="--c: #b79cf5; --d: 5.2s; --dl: -3s;" data-msg="You deserve every good thing that's coming your way." aria-label="Purple balloon"></button>
+        <button class="balloon" type="button" style="--c: #ff9d7a; --d: 6.1s; --dl: -1.8s;" data-msg="I'm so glad we found each other." aria-label="Orange balloon"></button>
+        <button class="balloon" type="button" style="--c: #ff9bbd; --d: 5.8s; --dl: -4s;" data-msg="Stay exactly who you are." aria-label="Rose balloon"></button>
+      </div>
+      <div class="msg-card">
+        <p class="msg" id="balloon-msg" aria-live="polite">Pop a balloon to read what's inside.</p>
+        <p class="count" id="balloon-count">7 balloons left</p>
+        <button class="btn btn-soft" id="refill" type="button" hidden>Fill them up again</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="letter-wrap">
+        <div>
+          <p class="label">a letter</p>
+          <h2>For you, with love</h2>
+        </div>
+        <div class="paper">
+          <p class="to">Dear Nisha,</p>
+          <p>Some people come into your life and quietly make it better. You are one of them.</p>
+          <p>You are the person I call when things are great, and the person I call when they are not. You have never once made me feel like either was too much. That is rare, and I don't say it enough, so I am saying it today.</p>
+          <p>I hope this year is gentle with you. I hope it gives you the things you have been working toward, the rest you keep putting off, and plenty of reasons to laugh until it hurts.</p>
+          <p>Whatever it brings, I'm here. Same as always.</p>
+          <p>P.S. Whenever you need a reminder that someone is wishing good things for you, scroll back up and light that candle again.</p>
+          <p class="sign">Happy birthday, my best friend.<br>Always yours</p>
+          <span class="seal" aria-hidden="true">N</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label">memories</p>
+      <h2>A few moments I keep</h2>
+      <!-- To use real photos, put <img src="your-photo.jpg" alt="..."> inside each .photo span. -->
+      <div class="polaroids">
+        <button class="pol" type="button" aria-pressed="false" style="--r: -3deg;">
+          <span class="pol-inner">
+            <span class="face"><span class="photo" style="--g: linear-gradient(160deg, #ffc2d6, #ffd979);"></span><span class="cap">late night talks</span></span>
+            <span class="face back"><span class="note">The ones where we said nothing important and everything that mattered.</span></span>
+          </span>
+        </button>
+        <button class="pol" type="button" aria-pressed="false" style="--r: 2deg;">
+          <span class="pol-inner">
+            <span class="face"><span class="photo" style="--g: linear-gradient(160deg, #bfe3ff, #e0d3ff);"></span><span class="cap">our silly side</span></span>
+            <span class="face back"><span class="note">Nobody else gets my weird. You do.</span></span>
+          </span>
+        </button>
+        <button class="pol" type="button" aria-pressed="false" style="--r: -1.5deg;">
+          <span class="pol-inner">
+            <span class="face"><span class="photo" style="--g: linear-gradient(160deg, #c9f0de, #bfe3ff);"></span><span class="cap">the hard days</span></span>
+            <span class="face back"><span class="note">You stayed. That was all I needed.</span></span>
+          </span>
+        </button>
+        <button class="pol" type="button" aria-pressed="false" style="--r: 3deg;">
+          <span class="pol-inner">
+            <span class="face"><span class="photo" style="--g: linear-gradient(160deg, #ffd9c2, #ffc2d6);"></span><span class="cap">tiny wins</span></span>
+            <span class="face back"><span class="note">You cheer for me louder than I do.</span></span>
+          </span>
+        </button>
+      </div>
+      <p class="small">Tap a photo to flip it over.</p>
+    </section>
+
+    <section class="section">
+      <p class="label">birthday coupons</p>
+      <h2>Scratch to see what you've won</h2>
+      <div class="coupons">
+        <div class="coupon">
+          <div><span class="tag">good for</span><p class="what">One long phone call, any hour, no questions asked.</p></div>
+          <canvas role="button" tabindex="0" aria-label="Scratch to reveal the coupon. Press Enter to reveal it."></canvas>
+        </div>
+        <div class="coupon">
+          <div><span class="tag">good for</span><p class="what">A free pep talk whenever you start doubting yourself.</p></div>
+          <canvas role="button" tabindex="0" aria-label="Scratch to reveal the coupon. Press Enter to reveal it."></canvas>
+        </div>
+        <div class="coupon">
+          <div><span class="tag">good for</span><p class="what">One tight hug, redeemable anytime, anywhere.</p></div>
+          <canvas role="button" tabindex="0" aria-label="Scratch to reveal the coupon. Press Enter to reveal it."></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label">reasons</p>
+      <h2>Why you're my person</h2>
+      <div class="reason-card">
+        <p class="reason" id="reason" aria-live="polite">You remember the little things.</p>
+        <button class="btn btn-primary" id="another" type="button">Another reason</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="label">wishes</p>
+      <h2>Wall of wishes</h2>
+      <div class="wall" id="wall">
+        <div class="sticky" style="--c: #ffd979; --r: -3deg;">May this year be soft on you.</div>
+        <div class="sticky" style="--c: #ffc2d6; --r: 2deg;">Everything you've been quietly hoping for.</div>
+        <div class="sticky" style="--c: #bfe3ff; --r: -1.5deg;">More adventures, less worrying.</div>
+      </div>
+      <form class="wish-form" id="wish-form" autocomplete="off">
+        <label for="wish">Your turn, Nisha. What do you wish for this year?</label>
+        <div class="wish-row">
+          <input id="wish" name="wish" type="text" maxlength="60" placeholder="Type your wish here">
+          <button class="btn btn-primary" type="submit">Stick it up</button>
+        </div>
+        <p class="status" id="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <footer class="foot">
+      <p>Made with love, for Nisha, on her birthday.</p>
+      <button class="btn btn-soft" id="again" type="button">Back to the cake</button>
+    </footer>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
